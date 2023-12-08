@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>P2P Data transfer without server</title>
+  </head>
+  <body>
+    <h2>P2P Data transfer without server</h2>
+    <div style="flex-direction: row;
+    display: flex;">
+      <div style="border: 1px solid; padding: 5px; margin: 5px; flex: 2;">
+        <div>
+          <span>Offer JSON - </span>
+          <input
+            name="offerJson"
+            placeholder="offer json here"
+            id="offerJson"
+          />
+          <button id="submitOffer">submit offer</button>
+        </div>
+        <br /><br />
+
+        <div>
+          <span>Answer JSON - </span>
+          <input
+            name="answerJson"
+            placeholder="answer json here"
+            id="answerJson"
+          />
+          <button id="submitAnswer">submit answer</button>
+        </div>
+        <br /><br />
+
+        <div>
+          <span>ICE Candidate JSON - </span>
+          <input
+            name="iceCandidate"
+            placeholder="iceCandidate json here"
+            id="iceCandidateJson"
+          />
+          <button id="submitIceCandidate">submit iceCandidate</button>
+        </div>
+        <br /><br />
+
+        <div>
+          <span>Message - </span>
+          <input name="message" placeholder="message here" id="message" />
+          <button id="sendMessage">send message</button>
+        </div>
+        <br /><br />
+
+        <button id="createOffer">create offer</button><br /><br />
+
+        <div>
+          <span>Message from the other Side - </span>
+          <span id="messageFromOtherSide"></span>
+        </div>
+      </div>
+
+      <div style="border: 1px solid; padding: 5px; margin: 5px; flex: 3;width: 60%;">
+        <span>Created Offer - </span> <br/> <p style="width: 55%; border: 1px solid grey;" id="createdOffer"></p>
+        <span>Created Answer - </span> <br/> <p style="width: 55%; border: 1px solid grey;" id="createdAnswer"></p>
+        <span>Possible ICE Candidate - </span> <br/> <p style="width: 55%; border: 1px solid grey;" id="possibleIceCandidate"></p>
+      </div>
+    </div>
+
+    <p>Peer Status - <p id="peerStatus"></p></p>
+
+    <script src="./client.js" />
+  </body>
+</html>
